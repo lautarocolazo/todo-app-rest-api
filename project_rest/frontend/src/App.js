@@ -77,7 +77,7 @@ class App extends React.Component {
 
     let url = "http://127.0.0.1:8000/api/task-create/"
 
-    if (this.state.editing == true) {
+    if (this.state.editing === true) {
       url = `http://127.0.0.1:8000/api/task-update/${this.state.activateItem.id}/`
       this.setState({
         editing: false
@@ -173,7 +173,7 @@ class App extends React.Component {
               return (
                 <div key={index} className="task-wrapper flex-wrapper">
                   <div onClick={() => self.strikeUnstrike(task)} style={{ flex: 7 }}>
-                    {task.completed == false ? (
+                    {task.completed === false ? (
                       <span>{task.title}</span>
                     ) : (
                       <strike>{task.title}</strike>
